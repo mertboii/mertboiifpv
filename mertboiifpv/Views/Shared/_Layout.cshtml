@@ -1,0 +1,194 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MertBoiiFPV</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+
+</head>,
+<body class="m-0">
+    <header>
+        <nav style="font-family: 'Sebino-Regular ☞' " class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark py-4">
+            <div class="container-fluid">
+                <div class="col-md-3  ">
+                    
+                    <ul class="navbar-nav flex-grow-1"  >
+                        <li class="nav-item"><a style="font-size:24px; font-weight:600" class="navbar-brand" asp-controller="MainPage" asp-action="Index">MertBoiiFPV</a></li>
+                        
+                        <li class="nav-item dropdown" style="font-size:20px; font-weight:500">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="bi bi-gear style="font-size:30px""></i> Management
+                            </a>
+
+                            <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown" >
+                                <a class="dropdown-item bg-dark text-white" asp-controller="CetusDrones" asp-action="Create"><i class="bi bi-plus"></i> Add Item</a>
+                                <a class="dropdown-item bg-dark text-white" asp-controller="Producers" asp-action="Index"><i class="bi bi-person"></i> Users</a>
+                                <a class="dropdown-item bg-dark text-white" asp-controller="Actors" asp-action="Index"><i class="bi bi-bag-check"></i> Orders</a>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+
+
+                <style>
+                    .dropdown-toggle::after {
+                        display: none;
+                    }
+                </style>
+
+
+
+
+                <div class="collapse navbar-collapse col-md-6 ">
+
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="font-size:20px; font-weight:500">
+                        <li class="nav-item px-1">
+                            <a class="nav-link" asp-controller="MainPage" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item px-1">
+                            <a class="nav-link" asp-controller="AllDrones" asp-action="AllDronesIndex">Drones</a>
+                        </li>
+                        <li class="nav-item px-1">
+                            <a class="nav-link" href="#">Electronics</a>
+                        </li>
+                        <li class="nav-item px-1">
+                            <a class="nav-link" href="#">Accessories</a>
+                        </li>
+                        <li class="nav-item px-1">
+                            <a class="nav-link" href="#">Support</a>
+                        </li>
+
+
+                        
+
+
+                    </ul>
+                </div>
+                <div class="collapse navbar-collapse col-md-3">
+
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                        <li class="nav-item">
+                            <form>
+                                <div class="form-white input-group" style="width: 220px; font-family: 'Sebino-Regular ☞'">
+                                    <input type="search" class="form-control rounded" placeholder="Search our store..."
+                                           aria-label="Search" aria-describedby="search-addon" />
+
+                                </div>
+
+                            </form>
+
+                        </li>
+                        <li class="nav-item ">
+                            <a href="#" class="nav-item px-2"><i class="bi bi-search text-white" style="font-size:25px"></i></a>
+                        </li>
+                        <li class="nav-item px-2">
+                            <a href="#"><i class="bi bi-person text-white" style="font-size:30px"></i></a>
+                        </li>
+                        <li class="nav-item px-2">
+                            <a href="#"><i class="bi bi-bag text-white" style="font-size:30px"></i></a>
+                        </li>
+
+                    </ul>
+
+
+                </div>
+
+
+
+
+
+
+            </div>
+        </nav>
+    </header>
+
+    <div style="height:70px">
+
+    </div>
+    
+
+    <div class="container-fluid" style="margin:0px; padding:0px">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    
+  
+        <div class="container-fluid p-5" style="background-color:#98d4dc">
+
+            <div class="row" style="font-family: 'Sebino-Regular ☞'; font-size: 14px; font-weight:300; letter-spacing:1px;">
+
+
+
+                <div class="col-md-3">
+                    SUPPORT<br />
+                                   <br />
+                    We're here to help <br />
+                    Visit our Customer Support :  <br />
+                    MertBoiiFPV Helpdesk <br />
+                    Track My Order <br />
+                    CONTACT US <br />
+                </div>
+                <div class="col-md-3">
+                   MERTBOIIFPV NAVIGATE <br />
+                                     <br />
+                    Terms & Conditions <br />
+                    Privacy Policy <br />
+                    Refund Policy <br />
+                    Return Policy <br />
+                    Payment Methods <br />
+                </div>
+                <div class="col-md-3">
+                    MERTBOIIFPV INFO<br />
+                    <br />
+                    About Us <br />
+                    Shipping <br />
+                    Warranty <br />
+                    Affiliate <br />
+                    Dealership <br />
+                </div>
+                <div class="col-md-3">
+                    SUBSCRIBE <br />
+                                     <br />
+                    
+                    Get the latest news from MertBoiiFPV <br />
+                                                     <br />
+                    
+                    <div style="font-size:25px;"> <i class="bi bi-instagram"></i><i class="bi bi-facebook offset-1"></i><i class="bi bi-twitter offset-1"></i><i class="bi bi-youtube offset-1"></i></div>
+
+                </div>
+
+            </div>
+
+            <div class="container text-center mt-5 pt-3 ">
+                <img style="max-width:90px" src="https://www.oceanpayment.com/shopify_app/oceanpayment_logo/Paypal.png" />
+                <img style="max-width:80px" src="https://www.oceanpayment.com/shopify_app/oceanpayment_logo/Master.png" />
+                <img style="max-width:80px" src="https://www.oceanpayment.com/shopify_app/oceanpayment_logo/Maestro.png" />
+                
+                <img style="max-width:80px" src="https://www.oceanpayment.com/shopify_app/oceanpayment_logo/JCB.png" />
+                <img style="max-width:80px" src="https://www.oceanpayment.com/shopify_app/oceanpayment_logo/AE.png" />
+                <img style="max-width:80px" src="https://www.oceanpayment.com/shopify_app/oceanpayment_logo/Discover.png" />
+                <img style="max-width:80px" src="https://www.oceanpayment.com/shopify_app/oceanpayment_logo/VISA.png" />
+                <br />
+                <br />
+
+                <div class="text-muted" style="font-size:15px">
+                    &copy; 2023 - MertBoiiFPV
+                </div>
+                
+            </div>
+
+
+        </div>
+    
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

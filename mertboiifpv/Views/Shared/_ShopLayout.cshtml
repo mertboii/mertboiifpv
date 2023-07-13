@@ -1,0 +1,226 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - mertboiifpv</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+
+</head>
+<body class="m-0">
+    <header>
+        <nav style="font-family: 'Sebino-Regular ☞' ; " class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark py-4">
+            <div class="container-fluid">
+                <div class="col-md-3 ">
+                    <a style="font-size:24px; font-weight:600" class="navbar-brand" asp-controller="MainPage" asp-action="Index">MertBoiiFPV</a>
+
+
+                </div>
+
+                <div class="collapse navbar-collapse col-md-6 ">
+
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="font-size:20px; font-weight:500">
+                        <li class="nav-item px-1">
+                            <a class="nav-link" asp-controller="MainPage" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item px-1">
+                            <a class="nav-link" asp-controller="AllDrones" asp-action="AllDronesIndex">Drones</a>
+                        </li>
+                        <li class="nav-item px-1">
+                            <a class="nav-link" href="#">Electronics</a>
+                        </li>
+                        <li class="nav-item px-1">
+                            <a class="nav-link" href="#">Accessories</a>
+                        </li>
+                        <li class="nav-item px-1">
+                            <a class="nav-link" href="#">Support</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="collapse navbar-collapse col-md-3">
+
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <form>
+                                <div class="form-white input-group" style="width: 220px;">
+                                    <input type="search" class="form-control rounded" placeholder="Search our store..."
+                                           aria-label="Search" aria-describedby="search-addon" />
+
+                                </div>
+
+                            </form>
+
+                        </li>
+                        <li class="nav-item ">
+                            <a href="#" class="nav-item px-2"><i class="bi bi-search text-white" style="font-size:25px"></i></a>
+                        </li>
+                        <li class="nav-item px-2">
+                            <a href="#"><i class="bi bi-person text-white" style="font-size:30px"></i></a>
+                        </li>
+                        <li class="nav-item px-2">
+                            <a href="#"><i class="bi bi-bag text-white" style="font-size:30px"></i></a>
+                        </li>
+                    </ul>
+
+
+                </div>
+
+
+
+
+
+
+            </div>
+        </nav>
+    </header>
+
+    <div style="height:90px">
+
+    </div>
+
+    <div class="container-fluid border-right" style="margin:0px; padding:0px ">
+        <main role="main" class="pb-3">
+
+            <div class="container-fluid row ">
+
+                <div class="col-md-2 h-25 mt-4 ">
+
+                    <nav id="navbar-example3" class="navbar" style="font-family: 'Sebino-Regular ☞'; font-weight:500">
+
+                        <h5>Categories</h5>
+
+                        
+                        <nav class="nav nav-pills flex-colum">
+                            <a class="nav-link text-decoration-none effect-one" style="color:dimgray" asp-controller="AllDrones" asp-action="AllDronesIndex">DRONES</a>
+                            <nav class="nav nav-pills flex-column">
+                                <a class="text-decoration-none nav-link link-d ml-3 my-1" asp-controller="CetusDrones" asp-action="Index" style="color:dimgray">Cetus Series</a>
+                                <a class="text-decoration-none nav-link ml-3 my-1" asp-controller="MeteorDrones" asp-action="Index" style="color:dimgray">Meteor Series</a>
+                                <a class="text-decoration-none nav-link ml-3 my-1" asp-controller="PavoDrones" asp-action="Index" style="color:dimgray">Pavo Series</a>
+                            </nav>
+
+                            <a class="nav-link text-decoration-none" href="#item-1" style="color:dimgray;">BATTERIES</a>
+                            <nav class="nav nav-pills flex-column">
+                                <a class="text-decoration-none nav-link link-d ml-3 my-1" href="#item-1-1" style="color:dimgray">1S Batteries</a>
+                                <a class="text-decoration-none nav-link ml-3 my-1" href="#item-1-2" style="color:dimgray">2S Baterries</a>
+                                <a class="text-decoration-none nav-link ml-3 my-1" href="#item-1-2" style="color:dimgray">3S Batteries</a>
+                                <a class="text-decoration-none nav-link ml-3 my-1" href="#item-1-2" style="color:dimgray">4-6S Batteries</a>
+                            </nav>
+
+                            <a class="nav-link text-decoration-none" href="#item-1" style="color:dimgray">MOTORS</a>
+                            <nav class="nav nav-pills flex-column">
+                                <a class="text-decoration-none nav-link link-d ml-3 my-1" href="#item-1-1" style="color:dimgray">Brushless Motors</a>
+
+                            </nav>
+
+                            <a class="nav-link text-decoration-none" href="#item-1" style="color:dimgray">ELECTRONICS</a>
+                            <nav class="nav nav-pills flex-column">
+                                <a class="text-decoration-none nav-link link-d ml-3 my-1" href="#item-1-1" style="color:dimgray">Antennas</a>
+                                <a class="text-decoration-none nav-link link-d ml-3 my-1" href="#item-1-1" style="color:dimgray">Transmitters</a>
+                                <a class="text-decoration-none nav-link link-d ml-3 my-1" href="#item-1-1" style="color:dimgray">Flight Controllers</a>
+
+                            </nav>
+
+                            <a class="nav-link text-decoration-none" href="#item-1" style="color:dimgray">ACCESSORIES</a>
+                            <nav class="nav nav-pills flex-column">
+                                <a class="text-decoration-none nav-link link-d ml-3 my-1" href="#item-1-1" style="color:dimgray">Frames</a>
+                                <a class="text-decoration-none nav-link link-d ml-3 my-1" href="#item-1-1" style="color:dimgray">Propellers</a>
+
+
+                            </nav>
+
+                        </nav>
+                    </nav>
+
+
+                </div>
+
+                <div class="col-md-10">
+
+                    @RenderBody()
+
+                </div>
+
+            </div>
+
+
+
+        </main>
+    </div>
+
+
+    <div class="container-fluid p-5" style="background-color:#98d4dc">
+
+        <div class="row" style="font-family: 'Sebino-Regular ☞'; font-size: 14px; font-weight:300; letter-spacing:1px;">
+
+
+
+            <div class="col-md-3">
+                SUPPORT<br />
+                <br />
+                We're here to help <br />
+                Visit our Customer Support :  <br />
+                MertBoiiFPV Helpdesk <br />
+                Track My Order <br />
+                CONTACT US <br />
+            </div>
+            <div class="col-md-3">
+                MERTBOIIFPV NAVIGATE <br />
+                <br />
+                Terms & Conditions <br />
+                Privacy Policy <br />
+                Refund Policy <br />
+                Return Policy <br />
+                Payment Methods <br />
+            </div>
+            <div class="col-md-3">
+                MERTBOIIFPV INFO<br />
+                <br />
+                About Us <br />
+                Shipping <br />
+                Warranty <br />
+                Affiliate <br />
+                Dealership <br />
+            </div>
+            <div class="col-md-3">
+                SUBSCRIBE <br />
+                <br />
+
+                Get the latest news from MertBoiiFPV <br />
+                <br />
+
+                <div style="font-size:25px;"> <i class="bi bi-instagram"></i><i class="bi bi-facebook offset-1"></i><i class="bi bi-twitter offset-1"></i><i class="bi bi-youtube offset-1"></i></div>
+
+            </div>
+
+        </div>
+
+        <div class="container text-center mt-5 pt-3 ">
+            <img style="max-width:90px" src="https://www.oceanpayment.com/shopify_app/oceanpayment_logo/Paypal.png" />
+            <img style="max-width:80px" src="https://www.oceanpayment.com/shopify_app/oceanpayment_logo/Master.png" />
+            <img style="max-width:80px" src="https://www.oceanpayment.com/shopify_app/oceanpayment_logo/Maestro.png" />
+
+            <img style="max-width:80px" src="https://www.oceanpayment.com/shopify_app/oceanpayment_logo/JCB.png" />
+            <img style="max-width:80px" src="https://www.oceanpayment.com/shopify_app/oceanpayment_logo/AE.png" />
+            <img style="max-width:80px" src="https://www.oceanpayment.com/shopify_app/oceanpayment_logo/Discover.png" />
+            <img style="max-width:80px" src="https://www.oceanpayment.com/shopify_app/oceanpayment_logo/VISA.png" />
+            <br />
+            <br />
+
+            <div class="text-muted" style="font-size:15px">
+                &copy; 2023 - MertBoiiFPV
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

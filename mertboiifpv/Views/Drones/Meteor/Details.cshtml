@@ -1,0 +1,65 @@
+﻿@using mertboiifpv.Models.Drones;
+
+@model Meteor
+
+@{
+    ViewData["Title"] = Model.ModelName;
+    
+}
+<br />
+<br />
+<div class="container-fluid   " style="font-family:'Sebino-Regular ☞'">
+    <div class="row">
+
+        <div class="col-5 ">
+            <img style="max-width:600px" src="@Model.ImageURL" alt="Alternate Text" />
+        </div>
+        <div class="col-7 " >
+            <br />
+            <br />
+            <br />
+            <h5 class="text-muted text-center">@Model.ModelName</h5>
+            <div class="text-center">
+                <i style="color: #e8d225; " class="bi bi-star-fill"></i>
+                <i style="color: #e8d225" class="bi bi-star-fill"></i>
+                <i style="color: #e8d225" class="bi bi-star-fill"></i>
+                <i style="color: #e8d225" class="bi bi-star-fill"></i>
+                <i style="color: #e8d225" class="bi bi-star-fill"></i>
+            </div>
+            
+            <br />
+            <h5 class="text-center"  style="color: #d7424f ">$@Model.ModelPrice USD</h5>
+            <br />
+            <br />
+            <br />
+            <div class="text-center">
+                <button href="" type="button" class=" btn-lg btn-block border" style="background-color: white !important; color: dimgray; font-weight:600">ADD TO CART </button>
+            </div>                
+            
+            <br />
+            <div class="text-center">
+                <button href="" type="button" class=" btn-lg btn-block border" style="background-color: #484e53 !important; color: white; font-weight: 600; ">BUY IT NOW </button>
+            </div>
+
+            <br />
+            <br />
+            <div class="container-fluid text-muted">
+                @Model.ModelDescription
+            </div>
+            
+
+        <br />
+        
+
+            
+
+
+
+        </div>
+
+
+
+
+    </div>
+
+</div>

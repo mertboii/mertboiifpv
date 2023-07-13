@@ -1,0 +1,61 @@
+﻿@using mertboiifpv.Models.Drones;
+
+@model IEnumerable<Cetus>
+
+@{
+    ViewData["Title"] = "Cetus Series - MertBoiiFPV";
+    Layout = "~/Views/Shared/_ShopLayout.cshtml";
+}
+<div class="container-fluid" style="font-family: 'Sebino-Regular ☞' ">
+
+
+    <br />
+
+    <div class="text-center" style="font-size:24px; font-weight:800">
+        CETUS SERIES
+    </div>
+   
+
+    <div class="text-center" style="font-size: 16px; font-weight: 500; color: dimgray">
+        Cetus Brushless Series
+
+
+    </div>
+    <br />
+    <div style="color: dimgray; font-weight:500">
+
+
+        @{
+            int count = @Model.ToList().Count;
+        }
+        @count Products
+    </div>
+
+    <style>
+        .card:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+    </style>
+
+    <div class="row">
+
+        @foreach (var item in Model)
+        {
+            <div class="card border-0  m-2" style="width: 17rem;">
+                <a asp-controller="CetusDrones" asp-action="Details" asp-route-id="@item.Id"><img class="card-img-top" src="@item.ImageURL" alt="Card image cap"></a>
+                <div class="card-body text-center">
+                    <a class="text-decoration-none card-text;  m-0" style="font-size:17px; font-weight:600; color:dimgray" href="">@item.ModelName</a><br />
+                    <a style="color:darkred; font-size:14px;" class="card-text  text-decoration-none" href="">from $@item.ModelPrice USD</a>
+
+                </div>
+            </div>
+        }
+
+    </div>
+
+
+
+
+
+</div>

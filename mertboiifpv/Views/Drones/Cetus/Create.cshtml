@@ -1,0 +1,85 @@
+﻿@using mertboiifpv.Models.Drones;
+@using mertboiifpv.Data;
+
+@model Cetus
+
+@{
+    ViewData["Title"] = "Create Drone - MertBoiiFPV";
+    Layout = "~/Views/Shared/_ShopLayout.cshtml";
+}
+
+
+
+<div class="row">
+    <div class="col-md-8 offset-2">
+        <p>
+            <h4>Add a new drone</h4>
+        </p>
+
+        <div class="row">
+            <div class="col-md-8 offset-2">
+                <form asp-action="Create">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label asp-for="ModelName" class="control-label"></label>
+                                <input asp-for="ModelName" class="form-control" />
+                                <span asp-validation-for="ModelName" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="ModelPrice" class="control-label"></label>
+                                <input asp-for="ModelPrice" type="number" class="form-control" />
+                                <span asp-validation-for="ModelPrice" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="ImageURL" class="control-label"></label>
+                                <input asp-for="ImageURL" class="form-control" />
+                                <span asp-validation-for="ImageURL" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+
+                            <div class="form-group">
+                                <label asp-for="DroneCategory" class="control-label"></label>
+                                <select asp-for="DroneCategory" class="form-control" asp-items="Html.GetEnumSelectList<DroneCategory>()"></select>
+                                <span asp-validation-for="DroneCategory" class="text-danger"></span>
+                            </div>
+
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label asp-for="ModelDescription" class="control-label"></label>
+                                <textarea asp-for="ModelDescription" class="form-control"></textarea>
+                                <span asp-validation-for="ModelDescription" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 offset-4 text-center">
+                        <img width="100%" id="ImageUrlPreview" />
+                    </div>
+
+                    <div class="form-group">
+                        <input type="submit" value="Create" class="btn btn-outline-success float-right" />
+                        <a class="btn btn-outline-secondary" asp-action="Index">Show all</a>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@section Scripts{
+    <script>
+        $("#ImageURL").on("change", function () {
+            var output = document.getElementById("ImageUrlPreview");
+            output.src = $(this).val();
+        })
+    </script>
+}
